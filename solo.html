@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://jsfiddle.net/kmHZt/59/show/ -->
+<html><script type="text/javascript">window["_gaUserPrefs"] = { ioo : function() { return true; } }</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title> - jsFiddle demo</title>
+  
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="parameters.js"></script>
+  
+  
+  <style type="text/css">
+    
+  </style>
+  
+
+
+<script type="text/javascript">//<![CDATA[ 
+$(window).load(function(){
+
+function loadMap(map) {
+    if (map == 1) {
+        return [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 
+				[0, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], 
+				[0, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], 
+				[0, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 0], 
+				[0, 1, 1, 2, 1, 1, 1, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 0], 
+				[0, 1, 1, 2, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 0], 
+				[0, 1, 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 0], 
+				[0, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1, 1, 1, 2, 1, 1, 0], 
+				[0, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 2, 1, 2, 1, 1, 1, 2, 1, 1, 0], 
+				[0, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 0], 
+				[0, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 0], 
+				[0, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 0], 
+				[0, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 0], 
+				[0, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 2, 2, 1, 1, 2, 1, 1, 0], 
+				[0, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 0], 
+				[0, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 0], 
+				[0, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1, 1, 1, 1, 0], 
+				[0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], 
+				[0, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0], 
+				[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
+    }
+}
+
+$(document).ready(function () {
+
+
+    canvas = document.getElementById("canvas");
+	
+    context = canvas.getContext("2d");
+
+    canvas.tabIndex = 0;
+    canvas.focus();
+
+	canvas.addEventListener('mousedown', function (e) 
+	{
+		var ClickFloorX = Math.floor(e.x/32);
+		var ClickFloorY = Math.floor(e.y/32);
+	
+		if (IsTileAllowedMouse(ClickFloorX, ClickFloorY)) {
+			if (ClickFloorY+vY == playerY) {
+				if (ClickFloorX+vX > playerX) 
+				{
+					playerX++;
+					SetDirection(39);
+				}
+				else if (ClickFloorX+vX < playerX) 
+				{
+					playerX--;
+					SetDirection(37);
+				}
+			DrawViewPort();
+			}
+		}
+	
+		if (IsTileAllowedMouse(ClickFloorX, ClickFloorY)) {
+			if (ClickFloorX+vX == playerX) {
+				if (ClickFloorY+vY > playerY)
+				{
+					playerY++;
+					SetDirection(40);
+				}
+				else if (ClickFloorY+vY < playerY)
+				{
+					playerY--;
+					SetDirection(38);
+				}
+			DrawViewPort();
+			}
+		}
+	}, false);
+	
+	function IsTileAllowedMouse(ClickFloorX, ClickFloorY)
+	{
+		if (board[ClickFloorY+vY][ClickFloorX+vX] != 1) {  return true; }
+		else { return false;}
+	}
+	
+	function IsTileAllowedKeyboard(key)
+	{
+	
+		var dodatnikX = 0;
+		var dodatnikY = 0;
+	
+		switch (key) {
+			case 37:
+				// Left
+				dodatnikX = -1;
+				break;
+			case 38:
+				// Up
+				dodatnikY = -1;
+				break;
+			case 39:
+				// Right
+				dodatnikX = 1;
+				break;
+			case 40:
+				// Down
+				dodatnikY = 1;
+				break;
+			}
+		
+		if (board[playerY+dodatnikY][playerX+dodatnikX] != 1) {  return true; }
+		else { return false;}
+	}
+	
+	function DrawViewPort()
+	{
+	    // Okay! The player is done moving, now we have to determine the "best" viewport.
+        // Ideally the viewport centers the player,
+        // but if its too close to an edge we'll have to deal with that edge
+		vX = playerX - Math.floor(0.5 * vWidth);
+        if (vX < 0) vX = 0;
+        if (vX + vWidth > worldWidth) vX = worldWidth - vWidth;
+
+
+        vY = playerY - Math.floor(0.5 * vHeight);
+        if (vY < 0) vY = 0;
+        if (vY + vHeight > worldHeight) vY = worldHeight - vHeight;
+		draw();
+	}
+	
+	function SetDirection(Direction)
+	{
+		moveRight = false;
+		moveLeft = false;
+		moveUp = false;
+		moveDown = false;
+		
+		switch (Direction)
+		{
+			case 37:
+				moveLeft = true;
+				break;
+			case 38:
+				moveUp = true;
+				break;
+			case 39:
+				moveRight = true;
+				break;
+			case 40:
+				moveDown = true;
+				break;
+				
+		}
+	}
+	
+    canvas.addEventListener('keydown', function (e) {
+        console.log(e);
+        var key = null;
+		if (IsTileAllowedKeyboard(e.which)) {
+			switch (e.which) {
+				case 37:
+					// Left
+					if (playerX > 0) playerX--; SetDirection(37);
+					break;
+				case 38:
+					// Up
+					if (playerY > 0) playerY--; SetDirection(38);
+					break;
+				case 39:
+					// Right
+					if (playerX < worldWidth) playerX++; SetDirection(39);
+					break;
+				case 40:
+					// Down
+					if (playerY < worldHeight) playerY++; SetDirection(40);
+					break;
+			}
+			
+		}
+		DrawViewPort();
+    }, false);
+
+    //var board = [];
+
+    //canvas.width = 512;
+    //canvas.height = 352;
+
+    board = loadMap(1);
+    imageObj = new Image();
+    tiles = [];
+
+	
+    var loadedImagesCount = 0;
+    for (x = 0; x <= NUM_OF_TILES; x++) {
+        var imageObj = new Image(); // new instance for each image
+        imageObj.src = x + ".gif";
+
+        imageObj.onload = function () {
+            // console.log("Added tile ... "+loadedImagesCount);
+            loadedImagesCount++;
+            if (loadedImagesCount == NUM_OF_TILES) {
+                // Onces all tiles are loaded ...
+                // We paint the map
+                draw();
+            }
+        };
+        tiles.push(imageObj);
+    }
+	
+	var frame = 0;
+	
+    function draw() {
+		
+	
+        context.clearRect(0, 0, canvas.width, canvas.height);
+
+		
+        //malowanie nowej mapy po mozliwym przesunieciu
+		for (y = 0; y <= vHeight; y++) {
+            for (x = 0; x <= vWidth; x++) {
+                theX = x * 32;
+                theY = y * 32;
+                context.drawImage(tiles[board[y + vY][x + vX]], theX, theY, 32, 32);
+            }
+        }
+		
+		
+		img.onload = loaded();
+			
+		function loaded() 
+		{
+			imageReady = true;
+			
+			redraw(frame);
+			frame++;
+			if (frame >= 3) frame = 0;
+		}
+	
+		function redraw(frame)
+		{
+			if (imageReady && moveRight)
+			{
+				context.drawImage(img, frame*24, 32, 28, 32, (playerX - vX) * 32, (playerY - vY) * 32, 32, 32);
+			}
+			else if (imageReady && moveLeft)
+			{
+				context.drawImage(img, frame*24, 96, 28, 32, (playerX - vX) * 32, (playerY - vY) * 32, 32, 32);
+			}
+			else if (imageReady && moveDown)
+			{
+				context.drawImage(img, frame*24, 64, 28, 32, (playerX - vX) * 32, (playerY - vY) * 32, 32, 32);
+			}
+			else if (imageReady && moveUp)
+			{
+				context.drawImage(img, frame*24, 0, 28, 32, (playerX - vX) * 32, (playerY - vY) * 32, 32, 32);
+			}
+			else 
+			{
+				context.drawImage(img, frame*24, 64, 28, 32, (playerX - vX) * 32, (playerY - vY) * 32, 32, 32);
+			}
+		}
+    }
+});
+});//]]>  
+
+
+//http://buildnewgames.com/sprite-animation/
+//http://www.stackprinter.com/export?service=gamedev.stackexchange&question=31989&printer=false&linktohome=true
+</script>
+
+
+<script type="text/javascript" src="chrome-extension://bfbmjmiodbnnpllbbbfblcplfjjepjdn/js/injected.js"></script></head>
+<body cz-shortcut-listen="true">
+  <canvas id="canvas" style="position: absolute; left: 0; top: 0; z-index: 0;" tabindex="0" width="512" height="352"></canvas>
+  
+
+
+
+
+
+</body></html>
